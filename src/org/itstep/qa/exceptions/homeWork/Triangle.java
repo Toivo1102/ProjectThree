@@ -25,7 +25,7 @@ public class Triangle {
     }
 
     public void printSquare() throws LengthException {
-        if ((a + b) < c && (b + c) < a && (a + c) < b) {
+        if ((a + b) <= c || (b + c) <= a || (a + c) <= b) {
             throw new LengthException();
         }
         System.out.println("Площадь треугольника равна: " + Math.sqrt(((a + b + c) / 2) *
